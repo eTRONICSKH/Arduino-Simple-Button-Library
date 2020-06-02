@@ -6,7 +6,7 @@ You can use the number of button as the Arduino possibility pin either `digital`
 ## Button Initailization
 You need to initiate the button independently by `pin` and `button-initial`. The button initail state is dependent on pulling-up or pulling-down. `HIGH` or `true` if pulled-up and `LOW` or `false` if pulled-down.
 
-**Note: ** Initiate as `HIGH`, the library already initiate Arduino as `INPUT_PULLUP`.
+**Note: Initiate as `HIGH`, the library already initiate Arduino as `INPUT_PULLUP`.**
 
 - **Create new buttons**:
 ```c++
