@@ -1,0 +1,19 @@
+#######################################
+# Syntax Coloring Map For simpleButton
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+button	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+push	KEYWORD2
+press	KEYWORD2
+release KEYWORD2
+
+onHold	KEYWORD2
