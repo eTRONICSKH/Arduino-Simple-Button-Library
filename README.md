@@ -6,6 +6,8 @@ You can use the number of button as the Arduino possibility pin either `digital`
 ## Button Initailization
 You need to initiate the button independently by `pin` and `button-initial`. The button initail state is dependent on pulling-up or pulling-down. `HIGH` or `true` if pulled-up and `LOW` or `false` if pulled-down.
 
+**Note: ** Initiate as `HIGH`, the library already initiate Arduino as `INPUT_PULLUP`.
+
 - **Create new buttons**:
 ```c++
 #inclue <button.h>
@@ -22,7 +24,7 @@ void setup(){
 }
 ```
 ## Button Features
-Integrated with essential actions while using buttons and making each function works independently. You can call any function any time and any where in your code but please note `There no interrupt action`.
+Integrated with essential actions while using buttons and making each function works independently. You can call any function any time and any where in your code but please note `There's no interrupt action`.
 - **Push Detection**:
 
   This function detects when the button is pushed, same as detecting `falling-edge` with pull-up button or `rising-edge` with pull-down button.
