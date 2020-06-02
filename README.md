@@ -1,4 +1,4 @@
-# SimpleButton-Arduino-Library
+# Arduino Simple Button Library
 Visit my website [www.etronicskh.com](https://www.etronicskh.com/).
 ## Quickstart
 You can use the number of button as the Arduino possibility pin either `digital` or `analog` pins. Also possible to use the mixing both `pull-up` or `pull-down`.
@@ -33,6 +33,43 @@ Integrated with essential actions while using buttons and making each function w
   bool button_two_push = BUTTON_TWO.push();
   ```
 - **Pressing Detection**:
+
+  This function detects whenever button is pushed down, same as detection `LOW` with pull-up button or `HIGH` with pull-down button.
+  
+  Return `boolean`.
+  ```c++
+  bool button_one_press = BUTTON_ONE.press();
+  bool button_two_press = BUTTON_TWO.press();
+  ```
 - **Release Detection**:
+  This function detects when button is released, same as `rising-edge` with pull-up button or `falling-edge` with pull-down button.
+  
+  Return `boolean`.
+  ```c++
+  bool button_one_released = BUTTON_ONE.release();
+  bool button_two_released = BUTTON_TWO.release();
+  ```
 - **Holding Timer**:
+  
+  This function returns timer in `milliseconds`, starts counting when button is pushed down till `reset holding` or released.
+  
+  Return `long`.
+  ```c++
+  long button_one_hold_time = BUTTON_ONE.onHold();
+  long button_two_hold_time = BUTTON_TWO.onHold();
+  ```
 - **Reset Holding**:
+
+  This function resets and stop the `onHold()` timer. holding timer will start again till new push.
+  
+  Return `none`.
+  ```c++
+  if(button_one_hold_time >= 5000){
+    BUTTON_ONE.resetHold();
+    Serial.println("Holding button 1 longer than 5 second.");
+  }
+  ```
+  
+  -------------------------------------------------------------------------------------------------------------------
+  
+  This library will update to match the most use button function with Arduino by [Theara](https://github.com/Ktheara).
