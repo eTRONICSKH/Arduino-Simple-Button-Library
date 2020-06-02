@@ -22,3 +22,16 @@ void setup(){
 }
 ```
 ## Button Features
+Integrated with essential actions while using buttons and making each function works independently. You can call any function any time and any where in your code but please note `There no interrupt action`.
+- **Push Detection**:
+This function detects when the button is pushed, same as detecting `falling-edge` with pull-up button or `rising-edge` with pull-down button.
+
+Return `boolean`.
+```c++
+bool button_one_push = BUTTON_ONE.push();
+bool button_two_push = BUTTON_TWO.push();
+```
+- **Pressing Detection**:
+- **Release Detection**:
+- **Holding Timer**:
+- **Reset Holding**:
