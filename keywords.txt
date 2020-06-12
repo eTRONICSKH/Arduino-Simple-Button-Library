@@ -8,6 +8,7 @@
 
 button	KEYWORD1
 
+
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
@@ -15,5 +16,7 @@ button	KEYWORD1
 push	KEYWORD2
 press	KEYWORD2
 release KEYWORD2
+debounce  KEYWORD2
 
 onHold	KEYWORD2
+resetHold   KEYWORD2

@@ -8,6 +8,7 @@ class button{
   public:
     button(uint8_t pin, bool n_stat);
     void init();
+    void debounce(long _delay=100);
     boolean push();
     boolean press();
     boolean release();
@@ -17,6 +18,8 @@ class button{
   private:
     uint8_t _pin;
     bool _stat;
+
+    long _debounce_delay = 100;
     
     //push variable
     bool _varP;

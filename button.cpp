@@ -15,11 +15,15 @@ void button::init(){
     _hTimer = millis();
 }
 
+void button::debounce(long _delay){
+	_debounce_delay = _delay;
+}
+
 
 boolean button::push(){
 	_pStat = false;
 	if(digitalRead(_pin)!=_stat){
-		if(!_varP && (millis()-_pTimer>=100)){
+		if(!_varP && (millis()-_pTimer>=_debounce_delay)){
 			_pStat = true;
 			_varP = true;
 		}
@@ -37,7 +41,7 @@ boolean button::press(){
 boolean button::release(){
   _rStat = false;
   if(digitalRead(_pin)==_stat){
-  	if(!_varR &&(millis()-_rTimer>=100)){
+  	if(!_varR &&(millis()-_rTimer>=_debounce_delay)){
   		_rStat = true;
   		_varR = true;
   	}
@@ -50,13 +54,13 @@ boolean button::release(){
 
 unsigned long button::onHold(){
 	if ((digitalRead(_pin) != _stat)){
-		if(!_varCount && (millis()-_pushTimer>=50)){
+		if(!_varCount && (millis()-_pushTimer>=_debounce_delay)){
 			_varCount = true;	//Enable Counter
 			_rstHold = true; 	//Reset holding state, new holding
 		}
 		_releaseTimer = millis();
 	}else{
-		if(_varCount && (millis()-_releaseTimer>=50)) _varCount = false;	//Disable counter, Holding is released
+		if(_varCount && (millis()-_releaseTimer>=_debounce_delay)) _varCount = false;	//Disable counter, Holding is released
 		_pushTimer = millis();
 	}
 	if (!_rstHold) _hTimer=millis();	//rst Holding timer
