@@ -23,6 +23,14 @@ void setup(){
   BUTTON_TWO.init();
 }
 ```
+
+- **Set debounce delay (Optional)**
+
+The defualt debounce delay is 100ms, it's optionla to set if the delay is okay. Possible to set to `Zero`.
+```c++
+BUTTON_ONE.debounce(200);
+```
+
 ## Button Features
 Integrated with essential actions while using buttons and making each function works independently. You can call any function any time and any where in your code but please note `There's no interrupt action`.
 - **Push Detection**:
