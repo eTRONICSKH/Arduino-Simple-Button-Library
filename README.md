@@ -26,7 +26,7 @@ You need to initiate the button independently by `pin` and `button-initial`. The
 
 - **Set debounce delay (Optional)**
 
-  The defualt debounce delay is 100ms, it's optionl to set if the delay is okay. Possible to set to `Zero`.
+  The defualt debounce delay is 100ms, it's optional to set if the delay is okay. Possible to set to `Zero`.
   ```c++
   BUTTON_ONE.debounce(200);
   ```
