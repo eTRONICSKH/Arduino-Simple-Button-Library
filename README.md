@@ -9,27 +9,27 @@ You need to initiate the button independently by `pin` and `button-initial`. The
 **Note: Initiate as `HIGH`, the library already initiate Arduino pin as `INPUT_PULLUP`.**
 
 - **Create new buttons**:
-```c++
-#inclue <button.h>
+  ```c++
+  #inclue <button.h>
 
-button BUTTON_ONE(3, HIGH); //pull-up button
-button BUTTON_TWO(A0, LOW); //pull-down button
-```
+  button BUTTON_ONE(3, HIGH); //pull-up button
+  button BUTTON_TWO(A0, LOW); //pull-down button
+  ```
 
 - **Initialize buttons**:
-```c++
-void setup(){
-  BUTTON_ONE.init();
-  BUTTON_TWO.init();
-}
-```
+  ```c++
+  void setup(){
+    BUTTON_ONE.init();
+    BUTTON_TWO.init();
+  }
+  ```
 
 - **Set debounce delay (Optional)**
 
-The defualt debounce delay is 100ms, it's optionla to set if the delay is okay. Possible to set to `Zero`.
-```c++
-BUTTON_ONE.debounce(200);
-```
+  The defualt debounce delay is 100ms, it's optionla to set if the delay is okay. Possible to set to `Zero`.
+  ```c++
+  BUTTON_ONE.debounce(200);
+  ```
 
 ## Button Features
 Integrated with essential actions while using buttons and making each function works independently. You can call any function any time and any where in your code but please note `There's no interrupt action`.
