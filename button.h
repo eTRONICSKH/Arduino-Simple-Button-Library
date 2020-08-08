@@ -23,12 +23,15 @@ class button{
     
     //push variable
     bool _varP;
-    bool _pStat;
     long _pTimer;
+
+    //Press variable
+    bool _prStat = false;
+    long _pprTimer; //start pressing timer
+    long _rprTimer; //release pressing timer
 
     //Release variable
     bool _varR;
-    bool _rStat;
     long _rTimer;
 
     //Holding variable
